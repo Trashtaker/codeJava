@@ -10,11 +10,11 @@ package Employee;
  * @author Administrator
  * (Id, First Name, Last Name, Phone, Email, Address, DOB, Sex, Salary, Agency
  */
-public class Employee implements Comparable<Object>{
+public class Employee implements Comparable<Object> {
     private String id, firstName, lastName,email,address, sex, agency;
     private int phone, day, month, year;
     private double salary;
-    private Birthday bday = new Birthday();
+    
     public Employee(String id, String firstName, String lastName, String email, String address, String sex, String agency, int phone, int day, int month, int year, double salary) {
         this.id = id;
         this.firstName = firstName;
@@ -29,7 +29,7 @@ public class Employee implements Comparable<Object>{
         this.year = year;
         this.salary = salary;
     }
-    
+
     public String getId() {
         return id;
     }
@@ -112,6 +112,23 @@ public class Employee implements Comparable<Object>{
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+    
+    public void getDOB() {
+        System.out.print(this.day + "-" +this.month +"-" + this.year+"   ");
+    }
+    
+    public void print() {
+        System.out.print((this.getId())+"   ");
+            System.out.print((this.getFirstName())+" ");
+            System.out.print((this.getLastName())+"   ");
+            System.out.print((this.getPhone())+"   ");
+            System.out.print((this.getEmail())+"   ");
+            this.getDOB();
+            System.out.print((this.getSex())+"   ");
+            System.out.print((this.getSalary())+"   ");
+            System.out.print((this.getAgency()));
+            System.out.println("\n");
     }
 
     public int compareTo(Object emp) {

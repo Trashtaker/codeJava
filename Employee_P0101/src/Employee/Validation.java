@@ -57,6 +57,20 @@ public class Validation {
         }
     }
     
+    public static double checkDouble (){
+        while (true) {            
+            try 
+            {
+                double output = Double.parseDouble(sc.nextLine().trim());
+                return output;
+            } 
+            catch (NumberFormatException e)
+            {
+                System.out.println("Please input a double number");
+            }
+        }
+    }
+    
     public static boolean checkUserApprove(){
         while (true) { 
             System.out.println("Enter Y/N: ");
